@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+.header {
+
+    background: white;
+    border-bottom: 1px solid lightgray;
+}
+.container {
+    width: 980px;
+    margin: auto;
+    padding: 20px 0;
+}
+.container-left {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.logo {
+    float: left;
+    margin-right: 5px;
+}
+.logo img {
+    display: block;
+
+}
+.menu {
+    float: left;
+}
+.menu-item {
+    float: left;
+    /* margin-right: 10px; */
+    padding: 8px 10px;
+}
+/* 선택자  가상요소  */
+/* 띄어준 float 을 해제하는거    float으로 띄웟으면 꼭 해제해줘야함*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
