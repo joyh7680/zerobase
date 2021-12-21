@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제 5번 - table</title>
+  </head>
+  <body>
+    <div>
+      <a href="../index.html">메인으로 이동</a>
+    </div>
+
+    <!-- table : 표
+    tr : 줄  table row
+    th 열의 칸  table header
+    td : 열의 셀  table data -->
+
+    <!-- 모든 표는 tr 로 구성  -->
+
+    <!-- tr 안에 th가 있는거  -->
+    <table>
+
+      <caption>
+        Fruits
+      </caption>
+
+      <colgroup>
+        <!-- 표의 열들을 공통적으로 정의하는 컬럼(<col>)과 그의 집합(<colgroup>). -->
+          <!-- span	연속되는 열 수	숫자(Number)	1 -->
+          <!-- 처음 열 2개는 연두색 그다음 열 2개는 토마토색  -->
+        <col span="2" style="background-color: yellowgreen;" />
+        <col span="2" style="background-color: tomato;" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <!-- colspan	확장하려는(병합) 열의 수 -->
+          <!-- rowspan	확장하려는(병합) 행의 수 -->
+
+          <!-- id 와 name은 price의 row 와 w, $ 의 row ,
+          2개의 행을 병합하려고 하기 때문에 rowspan : 2  -->
+          <th rowspan="2" >ID</th>
+          <th  rowspan="2" >Name</th>
+
+          <!-- w 열, $의 열  총 2 개를 병합하려고 하므로 
+          colspan : 2  -->
+          <th colspan="2" >Price</th>
+    
+        </tr>
+
+        <tr>
+          <th>w</th>
+          <th>$</th>
+        </tr>
+        
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>F123A</td>
+          <td>Apple</td>
+          <td>25000</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>F098B</td>
+          <td>Banana</td>
+          <td>22000</td>
+          <td>19</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+    <!-- <table border="1" bordercolor="blue" width ="500" height="300" align = "center" >
+        <tr bgcolor="blue" align ="center">
+          <p><td colspan = "3" span style="color:white">오늘의 수입/지출</td></p>
+        </tr>
+        
+        <tr align = "center" bgcolor="skybule">
+          <td>내용</td>
+          <td>수입</td>
+          <td>지출</td>
+        </tr>
+        <tr>
+      <td>월급!</td>
+      <td>1,000,000</td>
+      <td></td>
+        </tr>
+
+        <tr>
+      <td>점심값</td>
+      <td></td>
+      <td>5,000</td>
+        </tr>
+
+        <tr>
+      <td>부모님선물</td>
+      <td></td>
+      <td>30,000</td>
+        </tr>
+
+        <tr>
+      <td rowspan="3" align = "center" bgcolor="skyblue">총계</td>
+
+      <td>수입</td>
+      <td>지출</td>
+        </tr>
+
+        <tr>
+      <td>1,000,000</td>
+      <td>35,000</td>	
+        </tr>
+
+        <tr>
+      <td>남은돈</td>
+      <td>965,000</td>	
+        </tr>
+
+    </table> -->
+
+  </body>
+</html>
