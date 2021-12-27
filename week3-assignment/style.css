@@ -1,0 +1,14 @@
+button {
+  display: block;
+  margin: 10px;
+  background: mediumaquamarine;
+  border: white;
+  border-radius: 3px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
