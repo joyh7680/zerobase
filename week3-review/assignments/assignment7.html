@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제 7번</title>
+    <!-- 7. 다음의 예시의 그림과 같은 형태를 먼저 만든 다음, 넘어가는 내용을 scroll을 이용해 가두는 방법으로 만들어라.조건: container는 box의 부모요소이다.
+    조건: container의 width, height는 300px
+    box의 width: 200px, height: 400px
+    컨텐츠의 내용은 Lorem Ipsum (lorem emmet을 두 번 사용한다. -->
+
+    <!-- 7번 문제에서 overflow scroll이 제대로 적용되지 않아서 실제로 스크롤이 동작하지 않습니다. 이 부분에서 감점이 있었습니다. -->
+
+     <!-- 두개를 만들라는게 아니라 다음에 나타날 화면을 만들라는거였음  -->
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 300px;
+        height: 300px;
+        background: pink;
+        box-sizing: border-box;
+        overflow: scroll;
+        /* float: left;
+        margin-right: 50px; */
+      }
+      .box {
+        width: 200px;
+        height: 400px;
+        background: green;
+        /* word-break: keep-all; */
+      }
+      /* .box01 {
+        box-sizing: border-box;
+      }
+
+      .con02 {
+        overflow-y: scroll;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia autem
+        dolorem earum inventore excepturi rerumnesciunt similique harum animi
+        quisquam? Iste sit reprehenderit nam magni fugiat exercitationem
+        provident quaerat earum. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Molestias ab error dolore voluptates maiores in iste
+        rerum placeat tenetur necessitatibus optio officiis, quo consequatur
+        unde cum tempora, id impedit commodi.
+      </div>
+    </div>
+
+    <!-- <div class="container con02">
+      <div class="box box02">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia autem
+        dolorem earum inventore excepturi rerumnesciunt similique harum animi
+        quisquam? Iste sit reprehenderit nam magni fugiat exercitationem
+        provident quaerat earum. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Molestias ab error dolore voluptates maiores in iste
+        rerum placeat tenetur necessitatibus optio officiis, quo consequatur
+        unde cum tempora, id impedit commodi.
+      </div>
+    </div> -->
+  </body>
+</html>

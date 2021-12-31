@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제 1번</title>
+
+    <!-- css의 hover 속성을 사용하여 커서를 올리면 색과 크기가 변하는 상자를 만들어보시오.
+    조건: 기본 상자는 width: 100px, height: 100px, 바탕색: blue
+    hover 시 변하는 상자는 width: 200px, height: 200px, 바탕색: orange
+    변할 때에는 천천히 변할 수 있도록 transition을 0.5초 적용하시오 -->
+    <!-- 1번 문제의 경우 transition을 어디에 적용하는지에 따라서 hover가 끝난 후 되돌아가는 과정에서도 transition이 적용될 수 있습니다. 해당 부분 다시 해보시면 좋을 것 같습니다 :) -->
+
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        transition: 0.5s;
+        /* 기본 박스에 transtion 0.5 s 를 적용하면 되돌아가는 과정에서도 transition 이 적용됨  */
+      }
+      .box:hover {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        /* transition-duration: 0.5s; */
+        /* 오답: 호버시에만 transition을 적용하면 호버시에만 0.5초사이에 변하고 끝난후에 되돌아가는 과정에서는 적용되지 않아서 천천히 변화되지 않고 바로 파란상자로 변함  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
