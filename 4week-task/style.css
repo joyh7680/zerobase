@@ -45,6 +45,7 @@ section {
   padding: 10px;
   color: inherit;
   text-decoration-line: none;
+  box-sizing: border-box;
 }
 .news-item {
   background: yellowgreen;
@@ -82,26 +83,63 @@ section {
 /* 문제 2 */
 .float-container {
   width: 100%;
-  overflow: hidden;
+}
+.float-container::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 .float-item {
  width: 50%;
  float: left;
 }
 .news-link2 {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 문제 3 */
 .flex-container {
   background: yellowgreen;
+
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 .flex-item {
   background: tomato;
   border: 2px dashed red;
+
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* line-height: 150px;
+    text-align: center; */
 }
 
 /* 문제 4 */
 .smile-face {
+
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+
+  background-image: url("smile.jpg");
+  background-size: cover;
+  background-position: top center;
+  /* background-color: inherit; */
+
+
+}
+.smile-face:hover {
+  animation: move 1s 2s infinite ;
+
 }
 @keyframes move {
 }
