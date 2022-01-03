@@ -134,7 +134,13 @@ section {
   background-size: cover;
   background-position: top center;
   border-radius:50%;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   animation: move 2s linear 1s infinite alternate forwards;
+
+  /* position: relative;
+  left: 0px; */
+
+
 }
 .smile-face:hover {
   animation-play-state: paused;
