@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 단축속성 </title>
+    
+    <style>
+
+        body {margin: 0; padding: 0; box-sizing: border-box;}
+
+        .container {
+            border: 4px solid;
+            display: flex;
+        }
+
+        .container .item {
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            /* flex-grow: 1; */
+            /* flex-basis: 0;
+            여백의 너비 1 : 1 : 1 로 됌 기본값  */
+
+            /* flex: 1; */
+            /* 전체 너비 비율이 1:1:1 로 맞춰짐  */
+            /* why ? flex basis 값이 0이 아닌 auto 로 되어있기 때문  */
+
+           
+            flex: 1 1 auto ;
+            /* flex	flex-grow, flex-shrink, flex-basis의 단축 속성 */
+        }
+
+    </style>
+
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">good job!</div>
+        <div class="item item2">a</div>
+        <div class="item item3">hellow world~~ </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+
+    <!-- Item의 (공간 배분 전) 기본 너비를 설정합니다. -->
+    
+    <style>
+
+        body {margin: 0; padding: 0; box-sizing: border-box;}
+
+        .container {
+            border: 4px solid;
+            display: flex;
+        }
+
+        .container .item {
+            /* width: 100px; */
+            /* 고정 너비 를 지우니 넓이에 가변성이 주어짐  */
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            flex-grow: 1;
+            /* flex-basis: 0;s */
+            /* Item의 (공간 배분 전) 기본 너비를 설정합니다.
+            기본값 0 .비율 1: 1 :1  */
+
+            flex-basis:100px;
+            /* 기본적으로 100px를 가지고 있는 상태에서 나머지 비율 (grow) 1:1:2 로 맞추었기 때문에 
+            완전히 일정한 비율로 전체적으로 봤을때는 1:1:2 로 보이진 않음  */
+        }
+
+        /* container class 추가해서 우선순위 명시 해주기  */
+        .container .item3 {
+            flex-grow: 2;
+        }
+
+    </style>
+
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item item1">good job!</div>
+        <div class="item item2">a</div>
+        <div class="item item3">hellow world~~ </div>
+    </div>
+    
+</body>
+
+</html>

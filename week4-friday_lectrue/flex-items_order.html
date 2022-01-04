@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-items - order</title>
+
+    <style>
+        body {margin: 0; padding: 0; box-sizing: border-box;}
+        .container {
+            border: 4px solid;
+            display: flex;
+        }
+
+        .container .item {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 30px;
+
+            /* 문자가운데정렬 - 수직정렬 , 수평정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .item1 {
+            order: 0;
+        } */
+        /* iem1 은 이미 order 0으로 설정이 되어있음  */
+
+        .item1 {
+            order: 1;
+            /* order의 숫자가 늘어나면 뒤로 밀림 */
+            /* item 2번 부터 6번까지는 order 0 이 기본으로 설정되어있기때문에 
+
+            2-6 순서대로 나와있고
+            order 1 인 상자가 제일 뒤로 밀림  */
+        }
+        .item4 {
+            order: 1;
+        }
+        .item6 {
+            order: -1;
+        }
+
+        /* order 가 같을 경우 html 구조적으로 순서가 구현됨 ㄴ */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- .item.item$*6{$} -->
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+    </div>
+    
+</body>
+</html>
