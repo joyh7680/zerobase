@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template</title>
+
+    <style>
+        .container {
+
+            display: grid;
+            /* grid-template-columns: 200px 200px; */
+            /* 열 설정  */
+            /* 넓이가 200px인 열이 2개 만들어짐  */
+
+             /* grid-template-rows: 100px 100px; */
+             /* 행 설정 */
+             /* 높이가 100px인 행이 2개 만들어짐  */
+
+
+             /* grid-template-columns: 1fr 1fr 1fr; */
+             /* fraction 약어 : fr  */
+             /* 1:1 의 비율로 열을 만들겠다  */
+             /* 1fr 을 3개 쓰면 3개의 열이 만들어짐 쓴 갯수대로 열이 만들어짐  */
+             /* 1:1:1 의 비율로 열을 만듦  */
+
+             /* 5개이상, 10개 이상의 열을 만드는 경우 유연하게 만드는 경우  */
+             grid-template-columns:  repeat(3,1fr);
+             /* 3번을 반복할건데 어떤 단위를 반복할거냐  */
+
+             grid-template-rows:repeat(2,100px);
+             /* 위에꺼랑 같음  */
+              /* repeat (반복횟수, 반복할 단위) */
+       
+         
+            border: 4px solid lightgray;
+
+      
+        
+        }
+
+        .item {
+            border:  2px dashed red;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+
+
+    </div>
+
+
+    
+</body>
+
+
+</html>
