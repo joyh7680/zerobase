@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fill, auto-fit</title>
+
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box;}
+
+        .container {
+            width: 500px;
+            display: grid;
+            border: 10px solid grey;
+            /* grid-template-columns: repeat(4,minmax(120px, 1fr)); */
+            /* minmax 최소 최대값을 한꺼번에 입력하는 함수값 
+            열의 최소넓이가 120 px이고 1의 비율로 넓이가 달라짐  */
+
+            /* 암시적행의 크기 정렬  */
+            grid-auto-rows: 100px;
+
+            /* -> item상자들이 컨테이너 박스선을 넘어가버림  */
+            /* 이때 사용하는것이 auto-fill, auto-fit */
+
+            /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+            /* 자동으로 열이 맞춰짐  */
+
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+             /* auto fill 과 비슷하지만 차이가 있음 */
+           
+
+        }
+        .item  {
+            border:  10px solid red;
+            font-size: 20px;        
+        }
+    
+
+      
+    </style>
+
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+
+</body>
+
+
+</html>

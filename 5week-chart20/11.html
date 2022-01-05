@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template</title>
+
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box;}
+
+        .container {
+            display: grid;
+
+            /* grid-template-areas: 
+            "header header header"
+            "main . aside"
+            "footer footer footer"; */
+
+            /* 3개 행의 크기 (높이 )설정 ㄴ */
+            /* grid-template-rows: 80px 350px 130px; */
+
+            /* 3개 열의 넓이 설정  */
+            /* grid-template-columns: 2fr 100px 1fr; */
+
+
+            /* grid-template: 단축속성으로 옮기기 ; */
+            grid-template: 
+            "header header header" 80px
+            "main . aside" 350px
+            "footer footer footer" 130px
+            /2fr 100px 1fr;
+
+        }
+        .container > * {
+            border:  10px solid red;
+        }
+        header {
+          
+            grid-area: header;
+        }
+        main {
+            grid-area: main;
+        }
+        aside {
+            grid-area: aside;
+        }
+        footer {
+            grid-area: footer;
+        }
+
+      
+    </style>
+
+    
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>header </header>
+        <main> main </main>
+        <aside>aside</aside>
+        <footer>footer  </footer>
+    
+    </div>
+
+</body>
+
+
+</html>

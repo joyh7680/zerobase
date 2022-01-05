@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> grid-template-areas </title>
+
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box;}
+        .container {
+            display: grid;
+            grid-template-areas: 
+            /* 첫번째행  */
+            /* 3개의 열을 차지하는 헤더 만들기  */
+            "header header header"
+
+            /* 2번째 행  */
+            /* "main main aside" */
+            /* 가운데 빈칸만들기  */
+            "main . aside" 
+
+
+
+            /* 3번째 행  */
+            /* "footer footer footer"; */
+            ". footer footer";
+
+            /* 열 정리 ) 세번반복하고 높이가 100인 열 만들어주기  */
+            grid-template-rows: repeat(3,100px); 
+            grid-template-columns: repeat (3,1fr );
+
+            width: 600px;
+
+
+        }
+
+        .item {
+            border:  10px solid red;
+          
+        }
+        .item:nth-child(1) {
+            grid-area: header;
+          
+        }
+        .item:nth-child(2) {
+            grid-area: main;
+          
+        }
+        .item:nth-child(3) {
+            grid-area: aside;
+          
+        }
+        .item:nth-child(4) {
+            grid-area: footer;
+          
+        }
+       
+    </style>
+
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">header</div>
+        <div class="item">main</div>
+        <div class="item">aside</div>
+        <div class="item">footer</div>
+    </div>
+
+</body>
+
+
+</html>
