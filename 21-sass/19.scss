@@ -1,0 +1,29 @@
+// Mixin은 선택자를 포함 가능하고 상위(부모) 요소 참조(& 같은)도 할 수 있습니다.
+
+@mixin large-text {
+    font: {
+      size: 22px;
+      weight: bold;
+      family: sans-serif;
+    }
+    color: orange;
+  
+    &::after {
+      content: "!!";
+    }
+  
+    span.icon {
+      background: url("/images/icon.png");
+    }
+  }
+    
+  //   mixin쓰려면 include 쓰면됌 
+    .box1 {
+        @include large-text;
+        
+    }
+    .box2 {
+        @include large-text;
+        
+    }
+  //   box2번에도 동일한 내용 적용됌 

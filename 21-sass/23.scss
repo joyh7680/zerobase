@@ -1,0 +1,27 @@
+// 23 가변 인수 
+
+// 가변하는 인수들을 처리하기위해 
+// ... 을 추가 
+
+@mixin var ($w, $h, $bg...) {
+    width : $w;
+    height: $h;
+    background: $bg;
+}
+
+.box {
+    // include로 mixin 호출 
+    @include var(
+    100px, 
+    200px, 
+    url("image/a.png no-repeat 10px 20px"),
+    url("image/b.png no-repeat"));
+    // 요소 인수 확인 
+      url("image/c.png no-repeat"));
+}
+
+
+
+
+// bg image 다중이미지를 받아서 쓸 수 있
+// 다중이미지 쉼표로 구분해서 내용넣음 

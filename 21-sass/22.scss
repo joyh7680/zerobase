@@ -1,0 +1,27 @@
+// 22 키워드인수 
+
+@mixin dash-line($width: 1px, $color: black) {
+    border: $width dashed $color;
+  }
+  
+  
+  // .box1 { @include dash-line; }
+  // .box2 { @include dash-line(1px, blue); }
+  
+  // 1px 를 굳이 똑같이 쓰고싶지않음 
+  
+  // .box1 { @include dash-line; }
+  // .box2 { @include dash-line(blue); }
+  // 결과 : 1px이 되어야하는 자리에 blue 로 됌
+  // 이유는 
+  // 인수 개념 : 매개변수에 순서대로 적용이됌 
+  
+  .box1 { @include dash-line; }
+  .box2 { @include dash-line($color: blue); }
+  
+  // 변수써주면 해결
+  
+  
+  
+  
+  

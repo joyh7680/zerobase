@@ -1,0 +1,32 @@
+@mixin size ($w: 100px, $h: 100px) {
+    width:$w;
+    height:$h;
+}
+
+// mixin
+//  Mixins(‘믹스인’은 재사용 가능한 기능을 만드는 방식의 
+//  의미
+ 
+// .box1 {
+//     @include size (100px,100px);
+// }
+// .box2 {
+//     @include size (100px,100px);
+// }
+// .box3 {
+//     @include size (100px,100px);
+// }
+
+// 정의된내용은 include태그를 사용해서 미스인된 size 
+// 를 사용 
+
+.box1 {
+    @include size ;
+}
+.box2 {
+    @include size($h: 300px) ;
+}
+.box3 {
+    @include size ;
+}
+  

@@ -1,0 +1,21 @@
+// 25 확장 extend 
+
+.btn {
+    padding: 10px;
+    margin: 10px;
+    background: blue;
+}
+
+.btn-danger {
+    
+    // btn 의 css 속성들을 여기에 적용하기 
+    
+    @extend .btn;
+    // -> css에 다중선택자 로 컴파일됌 
+    
+    background:red;
+    
+}
+
+
+

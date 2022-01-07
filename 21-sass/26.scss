@@ -1,0 +1,32 @@
+// 26 확장 추천하지 않는 이유 
+
+.container {
+    width: 300px;
+    height: 300px;
+    background: red;
+    .item {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    .icon {
+        width: 100px;
+        height: 100px;
+        background: green;
+       }
+    }
+}
+
+// .new-icon {
+//     @extend .icon;
+// }
+
+
+.wrapper {
+    .new-icon{
+        @extend .icon;
+    }
+}
+// 조상요소의 부작용이 나타남 
+
+
+
