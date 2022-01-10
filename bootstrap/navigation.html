@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>네비게이션</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container" style="padding-top: 100px">
+      <!-- 1.  navbar-default 네비바 흰색  -->
+      <!-- 색상 반전 navbar-inverse  -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <!-- 4. 햄버거 메뉴 버튼 생성, 창 줄이면 나타남 -->
+                    <!-- 오른쪽 메뉴바 -->
+                    <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#go_menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+
+                        <!-- 6. icon-bar 가 햄버거메뉴버튼 bar 3개 모양  -->
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- 5. 햄버거 버튼 클릭했을때 list가 늘어나는 것이므로 data-target 과 id를 맞춰줘야함  -->
+                    <a class="navbar-brand" href="#">
+                        bootstrap 강의
+                    </a>
+                </div>
+                <!-- 2. list 만들기  -->
+                <div class="collapse navbar-collapse" id="go_menu">
+                    <ul class="nav navbar-nav">
+                        <!-- 3. active : 활성화 시키기  -->
+                        <li class="active">
+                            <a href="">html</a>
+                        </li>
+                        <li>
+                            <a href="">python</a>
+                        </li>
+                        <li>
+                            <a href="">Javascript</a>
+                        </li>
+                        <li>
+                            <a href="">php</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

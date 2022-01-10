@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>부트스트랩</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        .col-sm-6, .col-sm-4 {border:  1px solid red;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 한줄에 세개씩 나오게  -->
+        <!-- <div class="col-sm-4">첫번째</div>
+        <div class="col-sm-4">두번째</div>
+        <div class="col-sm-4">세번째</div> -->
+
+        <!-- 한줄에 2개씩 나오게 하고싶으면  -->
+        <!-- <div class="col-sm-6">첫번째</div>
+        <div class="col-sm-6">두번째</div>
+        <div class="col-sm-6">세번째</div> -->
+
+        <!-- md 970px보다 클때 -->
+        <!-- <div class="col-md-6">첫번째</div>
+        <div class="col-md-6">두번째</div>
+        <div class="col-md-6">세번째</div> -->
+
+        <!-- 문 : 
+        768px 작을때는 1
+
+        768 px 이상에서는 2
+        -> 768보다 클때 sm
+        sm 2*6 =    12
+        sm 6 
+
+        970px 이상에서는 3
+        ->  970보다 클때는 md 
+        12개 3*4 12 
+        md 4  
+
+        - >md랑 sm 을 같이쓰면됌  -->
+
+
+        <div class="col-sm-6 col-md-4">첫번째</div>
+        <div class="col-sm-6 col-md-4">두번째</div>
+        <div class="col-sm-6 col-md-4">세번째</div>
+    </div>
+    
+</body>
+</html>

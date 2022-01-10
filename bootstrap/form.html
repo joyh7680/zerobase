@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        li {margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 50px;">
+        <ul>
+            <!-- 줄바꿈이 안되게 하려면 form-inline -->
+              <!-- form-inline 하면 적당한 칸의 크기가됌  -->
+            <li class="form-inline">
+                <!-- id :  -->
+                <label for="">id</label>
+                <!-- 입력창 크게 - > form-control  -->
+                <input type="text" class="form-control">
+            </li>
+
+            <li class="form-inline">
+
+                <label for="">pw</label>
+                <input type="text" class="form-control">
+            </li>
+            <li class="form-inline">
+                <label for="">생년월일</label>
+                <select name="" id="" class="form-control">
+                    <option value="">년도</option>
+                    <option value="">1995</option>
+                    <option value="">1994</option>
+                </select>
+                <select name="" id="" class="form-control">
+                    <option value="">월</option>
+                    <option value="">09</option>
+                    <option value="">10</option>
+                </select>
+                <select name="" id="" class="form-control">
+                    <option value="">일</option>
+                    <option value="">30</option>
+                    <option value="">31</option>
+                </select>
+            </li>
+            <li class="form-inline">
+                <!-- input 의 id 와 label for id 를 같게  -->
+                <input type="checkbox" id="agree"> 
+                <label for="agree">약관에 동의하시겠습니까?</label>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
