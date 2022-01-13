@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Ch 03. 공통 - 04. 전역 스타일 - 입력 양식 - Vendor Prefix</title>
+
+    <style>
+        .input--text {
+            height: 34px;
+            padding: 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            box-shadow: inset 0 1px 2px rgba(0,0,0.075);
+            font-size: 16px;
+        }
+        .input--text:focus {
+            border-color: #51a7e8;
+            box-shadow: inset 0 1px 2px rgba(0,0,0.075), 
+                        0 0 5px rgba(81,167,232,0.5); 
+        }
+
+        /* placeholder color 바꾸기  */
+        /* .input--text::input-placeholder {color: red;} */
+
+        /* vendor prefix (브라우저 업체별 접두사 ) */
+        /* webkit : chrome browser */
+        .input--text::-webkit-input-placeholder {color: #cacaca;}
+        /*  ms  인터넷익스프롤러 엣지*/
+        .input--text::-ms-input-placeholder {color: #cacaca;}
+        /* moz 파이어폭스 브라우저   */
+        .input--text::-moz-input-placeholder {color: #cacaca;}
+        /* o opera 지원x  */
+        /* .input--text::-o-input-placeholder {color: red;} */
+
+    </style>
+</head>
+
+<body>
+    <input type="text" class="input--text" placeholder="Seach GitHub">
+    <input type="text" class="input--text" placeholder="hellow">
+    <input type="text" class="input--text" placeholder="world">
+    
+</body>
+</html>
