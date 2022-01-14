@@ -1,0 +1,25 @@
+
+
+/* media  */
+
+/* 769 로 맞추고 ?  */
+@media screen and (max-width: 1024px) {
+    header .main-menu {
+        display: none;
+    }
+    header .sign-group {display: none;}
+
+    
+
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}

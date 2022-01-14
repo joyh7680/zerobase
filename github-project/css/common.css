@@ -1,4 +1,6 @@
-
+body {
+    margin: 0;padding: 0; box-sizing: border-box;
+}
 /* 9  */
 /* common  */
 .body__container {
@@ -121,36 +123,12 @@ a {
     position: relative;
 }
 
-/* prcing card  */
-.section--pricing {
-
+/* blind :  p o wh m c 피오와엠씨  */
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
 }
-.section--pricing .inner{
-    padding: 80px 0;
-}
-.section--pricing .card {
-    display: flex;
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    box-sizing: border-box;
-
-}
-.section--pricing .card .cell {
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.section--pricing .card .cell1 .btn {
-    height: 50px;
-    font-size: 16px;
-
-}
-.section--pricing .card .cell2 {
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.5;
-}
-.section--pricing {}
-.section--pricing {}
