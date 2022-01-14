@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  background-color: #dfdfdf;
+  /* 코드 작성 */
+}
+
+.header {
+  background-color: pink;
+  width: 100%;
+
+  padding: 10px 0;
+}
+
+.nav {
+  background-color: yellow;
+  width: 100%;
+}
+/* 추가 CSS 코드 작성 */
+/* flex를 적용한 후 흐름을 column이 아닌 row(기본값)로 두고 flex-wrap을 사용하시면 컨테이너 내부로 요소들이 플로우를 형성하게 되어 더 쉽게 배치가 가능합니다. 1번 과제의 경우 flex를 사용해서 구현하는 것이 구현 조건이었습니다. */
+
+/* .menu {background-color: orange; display: inline-block; margin: 10px; padding: 10px;} */
+
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.nav li {
+  background-color: orange; 
+  margin: 10px; 
+  padding: 10px;
+}
+
+
+
+.sign {
+  width: 100%;
+}
+/* 추가 CSS 코드 작성 */
+.sign ul {display: flex;}
+.sign ul li {background-color: skyblue; padding: 3px;}
+.sign ul li:first-child {margin-right: 5px;}
+.sign #id {width: 150px; }
+
+.main,
+.aside {
+  height: 300px;
+}
+
+.main {
+  background-color: lightGreen;
+  width: 350px;
+  padding: 10px;
+ /* 추가 CSS 코드 작성 */
+ display: flex;
+ float: left;
+}
+
+section {
+  width: 50%;
+}
+
+.section1 {
+  background-color: green;
+}
+
+.section2 {
+  background-color: khaki;
+}
+
+.aside {
+  background-color: coral;
+  width: 150px;
+  /* 추가 CSS 코드 작성 */
+  float: left;
+}
+
+.footer {
+  background-color: lightGrey;
+  width: 100%;
+  height: 50px;
+/* 추가 CSS 코드 작성 */
+  clear: both;
+}
