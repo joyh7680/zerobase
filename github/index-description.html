@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 강의들으면서 한거  -->
+    <title>Github project </title>
+
+    <!-- 1. meta 정리  -->
+    <meta name="author" content="jiwon">
+    <meta name="description" content="GitHub is where people build software. More than 73 million people use GitHub to discover, fork, and contribute to over 200 million projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, maximum-scale=1">
+    <!-- user-scalable=no 손가락으로 device 확대나 축소를 허용하지 않겠다  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 2. og, twittter card index html copy (github heropy ) -->
+
+    <!-- property 속성  정보:type 
+    open graph 외부에 있는 웹사이트 정의  -->
+    <!-- http://ogp.me/ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GitHub">
+    <meta property="og:title" content="Build software better, together">
+    <meta property="og:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="og:image" content="img/logo__github.png">
+    <meta property="og:url" content="https://github.com">
+
+    <!-- twiiter card  -->
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="GitHub">
+    <meta property="twitter:title" content="Build software better, together">
+    <meta property="twitter:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="twitter:image" content="img/logo__github.png">
+    <meta property="twitter:url" content="https://github.com">
+
+
+    <!-- 3 favicon -->
+    <!-- 다른 모든 브라우저  -->
+    <link rel="icon" href="./favicon.png">
+    <!-- 스마트폰안에서도 작동하게  -->
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <!-- 인터텟 익스프롤러에서도 작동하게  -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- 4. google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- 7. reset.css - heropy github code copy  -->
+    <!-- 내가 작성한거보다 앞에 있어야함 * 호출순서 중요  -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- web에서 reset css 을 가져옴  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/main.js"></script>
+    
+</head>
+<body>
+    <div class="body__container">
+
+        <!-- header  -->
+        <header class="section">
+            <!-- inner 가운데로 몰아줄  -->
+            <div class="inner clearfix">
+                <div class="menu-group float--left">
+
+                    <!-- logo 메인페이지 이동 버튼  -->
+                    <div class="logo">
+                        <a href="#">GitHub</a>
+                    </div>
+
+                    <!-- <div class="main-menu"> menu -> ul li 을 쓰는게 좋음  </div> -->
+                    <ul class="main-menu toggle">
+                        <!-- page 간 이동 버튼 : a 태그    
+                            href -> 페이지이동할 링크값
+                            정하기전에는 # 으로 넣어주기 -->
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Open source</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Explore</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- 15. Ch 04. Header - 05. 오른쪽 콘텐츠 구조 -->
+                <div class="sign-group float--right toggle">
+
+                    <!-- @이게제일 오른쪽에 있는데 왜 이걸 먼저쓴거지  -->
+                    <!-- media query 로 돌아갔을때 위에서부터 순서대로 만들어야하기때문에  -->
+                    <div class="btn-group">
+                        <a href="#" class="btn sign-in">Sign in</a>
+                        <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                    </div>
+
+                    <!-- form, input id 값 지정  -->
+                    <!-- POST : 공개적일때  -->
+                    <form id="search-form" method="POST" action="">
+                        <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+                        <!-- 전송버튼 : 클릭시 서버 데이터 전송  -->
+                        <!-- home page는 submit 버튼이 없음 -> CSS로 가려주기  -->
+                        <input type="submit" value="Submit">
+                    </form>
+
+                    <ul class="sub-menu">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+
+                </div>
+
+                <div id="toggle-btn"><span class="blind">Header Menu Toggle Button</span> 
+
+                </div>
+
+            </div>
+        </header>
+        <!-- e: header  -->
+
+        <!-- 19. Ch 05. Visual - 02. Summary 구조  -->
+        <!-- visual  -->
+        <section class="section section--visual">
+            <div class="inner">
+
+                <!-- 왼  -->
+                <div class="summary">
+                    <h2 class="summary__title">How&nbsp;people build&nbsp;software
+                    </h2>
+                    <p class="summary__description">
+                        Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
+                    </p>
+                </div>
+
+                <!-- 오  -->
+                <form action="" id="sign-form" method="POST">
+                    <!-- ul 로 묶기  -->
+                    <ul>
+                        <!-- input type 다 다르게 써줄것  -->
+                        <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+                        <li><input type="email" class="input--text" placeholder="Your email address"></li>
+                        <li>
+                            <input type="pw" class="input--text" placeholder="Create a password">
+                            <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
+                       </li>
+                       <li>
+                           <!-- div 가 아니라 전송이 되어야하니까  form 태그 안에 button을 누르면 form-action 을 함 -->
+                           <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
+                           <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</p>
+                       </li>
+                    </ul>
+                </form>
+            </div>
+        </section>
+        <!-- e: visual  -->
+
+        <!-- feature  -->
+        <section class="section section--feature">
+            <div class="summary">
+                <h2 class="summary__title">Welcome home, developers</h2>
+                <p class="summary__description">GitHub fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.</p>
+            </div>
+            <div class="video">
+                <!-- 반응형에 맞게 바뀔 class 넣어주기  -->
+                <div class="video-ratio">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/afvT1c1ii0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 29. Ch 06. Feature - 05. Tiles 반응형 이미지 -->
+            <div class="tiles">
+                <div class="inner">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="img/feature-tile__build.png" alt="build">
+                            <h3>For everything you build</h3>
+                            <p>Host and manage your code on GitHub. You can keep your work private or share it with the world.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__work.png" alt="work">
+                            <h3>A better way to work</h3>
+                            <p>From hobbyists to professionals, GitHub helps developers simplify the way they build software.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__projects.png" alt="projects">
+                            <h3>Millions of projects</h3>
+                            <p>GitHub is home to millions of open source projects. Try one out or get inspired to create your own.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__platform.png" alt="platform">
+                            <h3>One platform, from start to finish</h3>
+                            <p>With hundreds of integrations, GitHub is flexible enough to be at the center of your development process.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- where is  -->
+        <section class="section section--where-is">
+            <div class="inner">
+                <div class="summary__title">
+                    Where is GitHub?
+                </div>
+                <div class="summary__description">
+                    GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- pricing card  -->
+        <section class="section section--pricing">
+            <div class="inner">
+                <div class="card">
+                    <div class="cell cell1">
+                        <a href="#" class="btn btn--primary">Sign up for GitHub</a>
+                    </div>
+                    <div class="cell cell2">Public projects are always free. Work together across unlimited private repositories for $7 / month.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 37. Ch 09. Footer - 01. 구조 파악, 메뉴 링크와 카피라이트 -->
+        <!-- footer  -->
+        <footer class="section">
+            <div class="inner clearfix">
+                <!-- 반응형일때 쌓이는 순서대로  -->
+                <ul class="site-links float--right">
+                    <li><a href="#">Contact GitHub</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+                <ul class="site-links float--left">
+                    <li>© 2016 GitHub, Inc.</li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+
+                <a href="#" class="logo">
+                    <svg version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 16 16"
+                        fill="#ccc">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+
+                </a>
+
+            </div>
+        </footer>
+
+
+    </div>
+
+        <!-- 34. Ch 07. Where is - 03. Google 지도 API -->
+        <script>
+            function initMap() {
+    
+                // const 상수/변수 
+                // myLatLng 최초의 위도와 경도 설정값
+                const myLatLng = {
+                    lat: 37.782293,
+                    lng: -122.391240
+                }
+    
+                // const map = new : const map 정의 new 키워드 
+                //  google.mpas.Map() : google maps에 들어있는 map 을 실행할것 
+                  // map() : 첫번째 인수 div id map 인수로 넣을 것 
+                //   오타주의 
+                const map = new google.maps.Map(document.getElementById('map'), {
+                         // 2 번쨰 인 수 -  옵션 설정  
+    
+                        // 1번쨰 인수  어느 위도 경도 위치로 출력될것이냐  설정 
+                        center: myLatLng,
+                        // 2 번쨰 인수 지도 밖에서 마우스 스크롤을 위아래로 움직이면 지도가 위아래로 움직이는 것을 막아줌 
+                        scrollwheel: false,
+                        // 얼만큼 확대된 상태로 지도를 보여줄것이냐 
+                        zoom: 18
+                })
+            
+                // 지도맵 안에 있는 위치 마커 : 빨간색 표시 아이콘 
+                const marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'GitHub'
+                })
+    
+            }
+        </script>
+    
+         <!-- 1. api 실행할 수 있는 주소 적기  -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+    
+        <!-- 2. 옵션 추가  : heropy 깃헙 소스파일 복붙 -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg"></script> -->
+    
+        <!-- 3. 콜백함수 initMap () 정의된 함수 ) 넣기  -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"></script> -->
+    
+        <!-- 4. 속성추가 async 비동기로 시작하겠다  
+        defer : html 구조가 다 로드되면 script 부분을 실행하겠다  -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34. Ch 07. Where is - 03. Google 지도 API</title>
+</head>
+<body>
+
+        <!-- 34. Ch 07. Where is - 03. Google 지도 API -->
+        <script>
+            function initMap() {
+    
+                // const 상수/변수 
+                // myLatLng 최초의 위도와 경도 설정값
+                const myLatLng = {
+                    lat: 37.782293,
+                    lng: -122.391240
+                }
+    
+                // const map = new : const map 정의 new 키워드 
+                //  google.mpas.Map() : google maps에 들어있는 map 을 실행할것 
+                  // map() : 첫번째 인수 div id map 인수로 넣을 것 
+
+                //   오타 
+                // const map = new google.mpas.Map(document.getElementById('map'), {
+
+               const map = new google.maps.Map(document.getElementById('map'), {
+                         // 2 번쨰 인 수 -  옵션 설정  
+    
+                        // 1번쨰 인수  어느 위도 경도 위치로 출력될것이냐  설정 
+                        center: myLatLng,
+                        // 2 번쨰 인수 지도 밖에서 마우스 스크롤을 위아래로 움직이면 지도가 위아래로 움직이는 것을 막아줌 
+                        scrollwheel: false,
+                        // 얼만큼 확대된 상태로 지도를 보여줄것이냐 
+                        zoom: 18
+                })
+            
+                // 지도맵 안에 있는 위치 마커 : 빨간색 표시 아이콘 
+                // const marker = new google.mpas.Marker({
+                const marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'GitHub'
+                })
+    
+            }
+        </script>
+    
+         <!-- 1. api 실행할 수 있는 주소 적기  -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+    
+        <!-- 2. 옵션 추가  : heropy 깃헙 소스파일 복붙 -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg"></script> -->
+    
+        <!-- 3. 콜백함수 initMap () 정의된 함수 ) 넣기  -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"></script> -->
+    
+        <!-- 4. 속성추가 async 비동기로 시작하겠다  
+        defer : html 구조가 다 로드되면 script 부분을 실행하겠다  -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+    
+</body>
+</html>

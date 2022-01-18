@@ -1,0 +1,514 @@
+/* 13. Ch 04. Header - 03. SVG 배경과 대체텍스트 - 1 */
+/* header  */
+header {
+    border-bottom: 1px solid rgba(0,0,0.075);
+    /* box-shadow: h-shadow v-shadow blur spread color inset; */
+    box-shadow:  0 0 5px rgba(0,0,0.075);
+    background:#fff;
+    /* height: 기본값 auto ; */
+}
+header .inner {
+    /* common 
+    max-width: 980px;
+    margin: 0 auto;  */
+    height: 78px;
+    /* 가운데정렬  */
+    /* width 설정 꼭 해줘야함  */
+
+}
+/* header .inner  .menu-group {} */
+header .menu-group {
+    display: flex;
+    /* flex 활용 수직정렬 ,높이설정 다시 해줘야함 */
+    align-items: center;
+    height: 100%;
+    /* float: left; */
+}
+header .logo {
+    margin-right: 10px;
+}
+header .logo a {
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    display: block;
+    /* github text 감추기  */
+    text-indent: -9999px;
+    /* @ text indent 말고 할 수있는거 뭐였더라  */
+}
+header .logo a:hover {
+    background: url(../img/logo_on.svg);
+}
+header .main-menu {
+    display: flex;
+}
+header .main-menu li a {
+    display: block;
+    /* margin-right: 10px; */
+    padding: 10px;
+    /* background-color: tan; */
+    color: #3c4146;
+}
+header .main-menu li a:hover {
+    color: #4078c0;
+}
+/* <!-- 15. Ch 04. Header - 05. 오른쪽 콘텐츠 구조 --> */
+header .sign-group {
+    display: flex;
+    /* 17. Ch 04. Header - 07. 좌우 분할(Float), 요소 정렬(Flex)과 순서(Order) - 2 */
+    /* pc ver 상 순서정하기  */
+
+    /* 가운데 수직정렬  */
+ height: 100%;
+ align-items: center;
+}
+/* order 의 숫자가 높을 수록 순서가 뒤로 밀려남  */
+header .btn-group {
+    order: 2;
+    /* a 태그안의 공간이 사라짐  */
+    display: flex;
+}
+header .btn-group .sign-in {
+    margin-right: 4px;
+}
+/* # 선택자ㅡ는 고유한요소이기때문에 부모요소 header 안붙여도 됌  */
+ #search-form {
+     order: 1;
+     margin-right: 12px;
+ }
+ #search  {
+    width: 160px;
+    font-size: 14px;
+ }
+ /* + : 다음형제요소  */
+ #search + [type="submit"], #sign + [type="submit"]{
+    display: none;
+ }
+ header .sub-menu {
+     display: flex;
+     font-size: 14px;
+     margin-right: 10px;
+ }
+ header .sub-menu li a {
+     padding: 8px;
+     display: block;
+     font-size: 13px;
+     color: #3c4146;
+ }
+ header .sub-menu li a :hover {
+     color: #4078c0;
+ }
+ #toggle-btn {
+     display: none;
+     background: url("../img/toggle-btn.svg");
+     width: 18px;
+     height: 24px;
+     position: absolute;
+     top: 16px;
+     right: 20px;
+     cursor: pointer;
+     text-indent: -9999px;
+ }
+
+/* week 6 주차 화 인강  */
+/* visual  */
+.section--visual {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /* background-image: url("../img/bg.jpg") no-repeat ; 이렇게 쓰는거랑 다르게나오네  */
+    background-size: cover;
+}
+/* 배경이미지 흐리게  */
+.section--visual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    bottom: 0;
+    right: 0;
+    /* top: 0; left: 0; bottom: 0; right: 0; = w 100% , h 100%  */
+    background: rgba(0,0,0,.3);
+}
+/* .section--visual .summary {} 공통적인거라서 common에 정리  */
+.section--visual .inner {
+    /* max-width: 980px;
+    margin: 0 auto; 반복적 코드   */
+    padding: 160px 0;
+    display: flex;
+}
+.section--visual .summary {
+    /* flex-grow: 1;
+    flex-basis: 0; 
+    flexe단축하면 */
+    flex: 1 ;
+    margin-right: 90px;
+}
+.section--visual .summary__title {
+    color: #fff;
+    font-size: 54px;
+    /* text-shadow : x축 y축  blur color , 두번째그림자값  */
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),  
+                 0 1px 25px rgba(0,0,0,.75);
+}
+.section--visual .summary__description {
+    color: #fff;
+    /* text-shadow : x축 y축  blur color , 두번째그림자값  */
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),  
+                 0 1px 25px rgba(0,0,0,.75);
+}
+#sign-form {
+    width: 340px;
+    margin-top: 16px;
+}
+#sign-form li {
+    margin-bottom: 17px;
+}
+#sign-form li :last-child {
+    margin-bottom: 0;
+}
+#sign-form .input--text {
+    width: 100%;
+    height: 40px;
+}
+#sign-form .caption {
+    font-size: 12px;
+    margin-top: 5px;
+    color:rgba(255,255,255,.6);
+    line-height: 1.5;
+    text-align: center;
+}
+#sign-form [type="submit"] {
+    width: 100%;
+    height: 62px;
+    padding: 0 25px;
+    font-size: 20px;
+    /* 부모가display inline flex 이기 때문  */
+    justify-content: center;
+}
+
+ /* feature  */
+ .section--feature {
+     background: #f5f5f5;
+     padding-top: 66px;
+ }
+ .section--feature .summary {
+     /* m 0 a 쓸려면 무조건 width 지정  */
+     margin: 0 auto;
+     max-width: 820px;
+     text-align: center;
+ }
+ .section--feature .video {
+    max-width: 650px;
+    margin: 50px auto;
+ }
+ .section--feature .video .video-ratio {
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+ }
+ .section--feature .video .video-ratio iframe {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section--feature .tiles {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.section--feature .tiles .inner {
+    max-width: 1200px;
+}
+.section--feature .tiles ul {}
+.section--feature .tiles li {
+    padding: 34px 24px;
+    text-align: center;
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    float: left;
+    /* float 해제해주기 ) 부모에 clear fix 있는지 확인 html css 요소 추가해주기  */
+    width: 25%;
+}
+/* display grid 로 할경우 반응형에따라 자동으로 컨텐츠 갯수가 줄어듬  */
+/* repeat(4, 1fr); : 4개 반복 1 비율로  */
+ /* 띄어쓰기 주의 @@ repeat(4, 1fr); */
+/* .section--feature .tiles ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.section--feature .tiles li {
+    padding: 34px 24px;
+    text-align: center;
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+} */
+.section--feature .tiles li:last-child {
+    border-right: none;
+}
+.section--feature .tiles li img {
+ max-width: 100%;
+ padding: 14px 10% 24px;
+ box-sizing: border-box;
+}
+.section--feature .tiles li h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.section--feature .tiles li p {
+    font-size: 14px;
+    color: #767676;
+}
+
+/* where is  */
+.section--where-is {}
+.section--where-is .inner {
+    padding-top: 80px;
+}
+/* .section--where-is #map {} */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-sizing: border-box;
+    /* 영역확인  */
+    /* background: red; */
+}
+
+/* prcing card  */
+.section--pricing {
+    background: linear-gradient(#f5f5f5, #fff);-
+}
+.section--pricing .inner{
+    padding: 80px 0;
+}
+.section--pricing .card {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.section--pricing .card .cell {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section--pricing .card .cell1 .btn {
+    height: 50px;
+    font-size: 16px;
+}
+.section--pricing .card .cell2 {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    /* 36. Ch 08. Pricing - 02. 스타일 */
+    flex: 1;
+    border-left: 1px solid #e5e5e5;
+}
+
+/* footer  */
+footer {}
+footer .inner {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+}
+footer .inner {}
+footer .site-links {
+    display: flex;
+}
+footer .site-links li {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #767676;
+}
+footer .site-links li a {
+    color: #4078c0;
+}
+footer .site-links li a:hover {
+    text-decoration: underline;
+}
+footer .logo {
+    /* logo 가운데 배치  */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+}
+footer .logo svg {}
+
+/* hover 순서 잘 쓸것  */
+footer .logo:hover svg {
+    fill: #4078c0;
+}
+
+
+
+
+
+/* media  */
+
+/* 1024 부터 header 메뉴사라지고
+왼쪽에 로고, 오른쪽에 햄버거 메뉴  */
+@media screen and (max-width: 1024px) {
+
+    /* header .inner {
+        max-width: none;
+    } */
+    /* 우선순위 명시  */
+    header.section .inner {
+        max-width: none;
+        /* 햄버거메뉴때문에 높이가 달라지므로  */
+        height: auto;
+        padding: 0 20px;
+    }
+    /* float left, right 해제  */
+    header .menu-group, 
+    header .sign-group {
+        float: none;
+    }
+    header .menu-group {
+        /* 수평을 수직으로  */
+        display: block;
+    }   
+    header .logo {
+        padding: 12px 0;
+    }
+    header .main-menu {
+        /* flex 수평으로 되어있는 아이템 수직정렬로 바꿔주기  */
+        display: block;
+        margin-bottom: 10px;
+    }
+    header .main-menu  li {
+        border-top: 1px solid #e5e5e5;
+    }
+    header .main-menu  li a {
+        padding: 16px 0;
+    }
+    header .sign-group {
+           /* flex 수평으로 되어있는 아이템 수직정렬로 바꿔주기  */
+        display: block;
+        /* block으로 바꾸면 order가 적용되지 않음  */
+        padding: 10px 0 20px;
+    }
+    header .btn-group {
+         /* flex 수평으로 되어있는 아이템 수직정렬로 바꿔주기  */
+        display: block;
+    }
+    header .btn-group .btn {
+        justify-content: center;
+    }
+    header .btn-group .sign-in {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    #search-form {
+        margin-top: 12px;margin-right: 0;
+    }
+    #search {
+        width: 100%;
+        height: 42px;
+        text-align: center;
+    }
+    header .sub-menu {
+        margin-top: 12px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    /* toggle  */
+    /* toggle 우선수위 마지막에 써야 적용됨  */
+    /* header .main-menu { display: none;}
+    header .float--right { display: none;} */
+    /* 1. 사라지는 메뉴 css 로 작성 
+    2. html 에 toggle class추가  */
+    header .toggle {
+        display: none;
+    }
+    header .toggle.on {
+        display: block;
+    }
+    /* 햄버거 메뉴 버튼  */
+    #toggle-btn {
+        display: block;
+    }
+
+    /* VISUAL  */
+    .section--visual {
+        background-image: url("../img/bg-small.jpg");
+    }
+    .section--visual .inner {
+        display: block;
+        min-width: none;
+        padding: 80px 20px;
+    }
+    .section--visual .summary {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    #sign-form {
+        width: auto;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* feature  */
+    .section--feature .summary {
+        padding: 66px 20px 0 20px;
+    }
+    .section--feature .tiles li {
+        width: 50%;
+    }
+    .section--feature .tiles li:nth-child(2) {
+        border-right: none;
+    } .section--feature .tiles li img {
+        padding: 14px 30% 24px;
+    }
+
+    /* Where is  */
+    .section--where-is .inner {
+        max-width: none;
+        padding: 80px 20px 0 20px;
+
+    }
+
+    /* pricing card  */
+    .section--pricing .inner {
+        max-width: none;
+        padding: 80px 20px;
+    }
+    .section--pricing .card .cell2 {
+        font-size: 20px;
+    }
+
+    /* footer  */
+    footer .inner {
+        padding: 50px 20px;
+    }
+    footer .logo {
+        display: none;
+    }
+ 
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
+       
